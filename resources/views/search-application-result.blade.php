@@ -122,22 +122,28 @@
                     </div>
                 </div>
 
+                
                 <div class="text-center mt-6">
-                    <a href="{{ route('reaccreditation.confirmation', [
-                        'applicationNumber' => $applicationNumber,
-                        'organization_name' => $results['organization_name'],
-                        'request_type' => $results['request_type'],
-                        'status' => $results['status'],
-                        'timestamp' => $results['timestamp']
-                    ]) }}" class="text-white bg-gradient-to-r from-[#A43B21] to-[#DD941F] hover:bg-gradient-to-r hover:from-[#DD941F] hover:to-[#A43B21] focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-full text-sm px-6 py-4 shadow-md">
-                        Yes, this is correct!
-                    </a>
-                    <div class="mt-4">
-                        <a href="{{ route('search.application') }}" class="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-500 transition duration-300">
-                            This is not my request, retry
-                        </a>
-                    </div>
-                </div>
+    <a href="{{ route('reaccreditation.confirmation', [
+        'applicationNumber' => $applicationNumber,
+        'organization_name' => $results['organization_name'],
+        'request_type' => $results['request_type'],
+        'status' => $results['status'],
+        'timestamp' => $results['timestamp'],
+        'representative_name' => $results['representative_name'],
+        'representative_email' => $results['representative_email'],
+        'contact_number' => $results['contact_number']
+    ]) }}" class="text-white bg-gradient-to-r from-[#A43B21] to-[#DD941F] hover:bg-gradient-to-r hover:from-[#DD941F] hover:to-[#A43B21] focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-6 py-4 shadow-md">
+        Yes, this is correct!
+    </a>
+
+    <div class="mt-7">
+        <a href="{{ route('search.application') }}" class="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-500 transition duration-300">
+            This is not my request, retry
+        </a>
+    </div>
+</div>
+
 
             @endif
 

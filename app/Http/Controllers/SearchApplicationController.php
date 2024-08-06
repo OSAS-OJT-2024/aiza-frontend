@@ -18,12 +18,11 @@ class SearchApplicationController extends Controller
         $applicationNumber = $request->input('application_number');
 
         // Mock data for testing
-         // Mock data for testing
-         if ($applicationNumber === '0000-0000-0000') {
+        if ($applicationNumber === '0000-0000-0000') {
             $results = [
                 'organization_name' => 'OSAS INTERNS SAMPLE ORG',
                 'request_type' => 'RE-ACCREDITATION',
-                'status' => 'Pending',  // Updated to 'Pending' with proper casing
+                'status' => 'Returned',  
                 'timestamp' => '07/17/2024 9:30 AM',
                 'representative_name' => 'John Doe',
                 'representative_email' => 'john.doe@example.com',
@@ -39,13 +38,27 @@ class SearchApplicationController extends Controller
 
     // Handle the confirmation page route
     public function showConfirmation(Request $request)
-    {
-        $applicationNumber = $request->input('applicationNumber');
-        $organization_name = $request->input('organization_name');
-        $request_type = $request->input('request_type');
-        $status = $request->input('status');
-        $timestamp = $request->input('timestamp');
+{
+    $applicationNumber = $request->input('applicationNumber');
+    $organization_name = $request->input('organization_name');
+    $request_type = $request->input('request_type');
+    $status = $request->input('status');
+    $timestamp = $request->input('timestamp');
+    $representative_name = $request->input('representative_name');
+    $representative_email = $request->input('representative_email');
+    $contact_number = $request->input('contact_number');
 
-        return view('reaccreditation-confirmation', compact('applicationNumber', 'organization_name', 'request_type', 'status', 'timestamp'));
-    }
+    return view('reaccreditation-confirmation', compact(
+        'applicationNumber',
+        'organization_name',
+        'request_type',
+        'status',
+        'timestamp',
+        'representative_name',
+        'representative_email',
+        'contact_number'
+    ));
+}
+
+    
 }

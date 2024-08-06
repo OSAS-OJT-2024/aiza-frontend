@@ -4,4 +4,29 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom global styles can go here */
+
+/* Status specific styles */
+.status-pending {
+    background-color: #FFFF00; /* Light Yellow */
+    color: #A43B21;
+    padding: 0.3rem 0.6rem;
+    border-radius: 1rem; /* Increase border-radius for more rounded appearance */
+    display: inline-block;
+}
+
+.status-returned {
+    background-color: #F6B8B8; /* Light Red */
+    color: #A43B21;
+    padding: 0.3rem 0.6rem;
+    border-radius: 1rem;
+    display: inline-block;
+}
+
+.status-approved {
+    background-color: #A1E6A1; /* Light Green */
+    color: #1C6C1C;
+    padding: 0.3rem 0.6rem;
+    border-radius: 1rem;
+    display: inline-block;
+}
+
