@@ -7,7 +7,7 @@
     <div class="bg-white dark:bg-gray-800 shadow-md">
         <div class="max-w-5xl mx-auto py-4 px-6 flex flex-col md:flex-row items-center justify-between">
             <div class="flex items-center">
-                <img src="{{ asset('images/osas-logo.svg') }}" alt="USeP Logo" class="h-12 md:h-16">
+                <img src="{{ asset('images/OSAS-Logo.png') }}" alt="USeP Logo" class="h-12 md:h-16">
                 <div class="ml-4 text-center md:text-left">
                     <h1 class="text-xl md:text-2xl font-bold text-orange-700 dark:text-orange-300">University of Southeastern Philippines</h1>
                     <p class="text-xs md:text-sm text-gray-600 dark:text-gray-300">Student Organization Portal</p>

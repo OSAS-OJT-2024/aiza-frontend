@@ -16,5 +16,7 @@ Route::get('/organization-form', function () {
     return view('organization-form');
 });
 
-
+Route::get('/selection-of-application', function () {
+    return view('selection-of-application');
+})->name('selection-of-application');
 

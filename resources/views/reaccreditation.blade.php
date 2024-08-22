@@ -14,7 +14,7 @@
         <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 md:p-12 w-full max-w-full md:max-w-5xl">
 
             <!-- Progressive-Step Bar step 1 -->
-            @include('layouts.progress-bar', ['step' => 1])
+            @include('layouts.progress-bar', ['step' => 2])
         
                 <!-- STEP Label -->
                 <div class="bg-orange-600 text-white text-center text-xl font-bold rounded-t-lg p-4 mb-6">STEP 1: ORGANIZATION DETAILS</div>
